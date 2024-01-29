@@ -22,7 +22,7 @@ const PricingCards = () => {
             For small sized PG accomodation
           </p>
           <div class="flex justify-center items-baseline my-8">
-            <span class="mr-2 text-5xl font-extrabold">₹499</span>
+            <span class="mr-2 text-5xl font-extrabold">₹999</span>
             <span class="text-gray-500 ">/month</span>
           </div>
           <ul role="list" class="mb-8 space-y-4 text-left">
@@ -180,7 +180,7 @@ const PricingCards = () => {
             For medium sized PG accomodation
           </p>
           <div class="flex justify-center items-baseline my-8">
-            <span class="mr-2 text-5xl font-extrabold"> ₹1099</span>
+            <span class="mr-2 text-5xl font-extrabold"> ₹1699</span>
             <span class="text-gray-500 ">/month</span>
           </div>
           <ul role="list" class="mb-8 space-y-4 text-left">
@@ -338,7 +338,7 @@ const PricingCards = () => {
             For large sized PG accomodation
           </p>
           <div class="flex justify-center items-baseline my-8">
-            <span class="mr-2 text-5xl font-extrabold"> ₹1899</span>
+            <span class="mr-2 text-5xl font-extrabold"> ₹2499</span>
             <span class="text-gray-500 dark:text-gray-400">/month</span>
           </div>
 

@@ -6,6 +6,7 @@ import { useSnackbar } from "notistack";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import eye icons
 import BackButton from "../components/BackButton";
 import config from "../../config.json";
+import BackButton2 from "../components/BackButton2";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,13 +20,10 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        `${URL}/api/v1/pg/login`,
-        {
-          email,
-          password,
-        }
-      );
+      const response = await axios.post(`${URL}/api/v1/pg/login`, {
+        email,
+        password,
+      });
 
       console.log("Token value:", response.data.token);
       setCookie("access-token", response.data.token);
@@ -53,7 +51,7 @@ const Login = () => {
       >
         <div className="flex justify-between">
           <h2 className="text-2xl font-semibold mb-4">Login</h2>
-          <BackButton />
+          <BackButton2 />
         </div>
         <div className="mb-4 relative">
           <label
