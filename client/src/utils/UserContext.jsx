@@ -1,8 +1,8 @@
-// UserContext.js
+// // UserContext.js
 import { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
 import { useCookies } from "react-cookie";
-
+import config from "../../config.json";
 const UserContext = createContext();
 
 export const useUser = () => {
@@ -17,7 +17,7 @@ export const UserProvider = ({ children }) => {
   const [cookies, setCookie, removeCookie] = useCookies(["access-token"]);
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
-
+  const URL = config.BACKEND_URL;
   const updateUser = (newUser) => {
     setUser(newUser);
   };
@@ -28,14 +28,11 @@ export const UserProvider = ({ children }) => {
         const accessToken = cookies["access-token"];
 
         if (accessToken) {
-          const response = await axios.get(
-            "http://localhost:5000/api/v1/pg/profile",
-            {
-              headers: {
-                Authorization: `Bearer ${accessToken}`,
-              },
-            }
-          );
+          const response = await axios.get(`${URL}/api/v1/pg/profile`, {
+            headers: {
+              Authorization: `Bearer ${accessToken}`,
+            },
+          });
 
           setUser(response.data);
         } else {
