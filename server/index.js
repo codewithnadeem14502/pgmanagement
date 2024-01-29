@@ -32,10 +32,11 @@ app.use(
     credentials: true,
   })
 );
-
+// added here
+app.use(isAuth);
 app.use("/api/v1/pg", pgRouter);
 app.use("/api/v1/tenant", TenantsRouter);
-app.use(isAuth);
+
 
 app.use(express.static(path.join(__dirname, "dist")));
 app.get("*", (req, res) => {
