@@ -33,7 +33,7 @@ app.use(
   })
 );
 // added here
-app.use(isAuth);
+// app.use(isAuth);
 app.use("/api/v1/pg", pgRouter);
 app.use("/api/v1/tenant", TenantsRouter);
 
