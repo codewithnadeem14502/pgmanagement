@@ -5,13 +5,13 @@ import { useUser } from "../utils/UserContext";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useSnackbar } from "notistack";
-
+import config from "../../config.json";
 const Header = () => {
   const navigate = useNavigate();
   const { user, removeCookie } = useUser();
   const userIDcontext = user.id;
   const { enqueueSnackbar } = useSnackbar();
-
+  const URL = config.BACKEND_URL;
   const [menuVisible, setMenuVisible] = useState(false);
 
   const handleHome = () => {
@@ -37,9 +37,7 @@ const Header = () => {
   const handleLogout = async () => {
     try {
       // Make an API request to logout
-      const response = await axios.get(
-        "http://localhost:5000/api/v1/pg/logout"
-      );
+      const response = await axios.get(`${URL}/api/v1/pg/logout`);
       const message = response.data.message;
       if (message === "Logout Successful") {
         // Clear the "access-token" cookie on the client side
