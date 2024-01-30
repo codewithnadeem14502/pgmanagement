@@ -42,18 +42,18 @@ const Accordion = () => {
 
   return (
     <>
-      <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 text flex justify-center items-center md:text-3xl my-14">
+      <h1 className="text-4xl tracking-tight font-extrabold text-white text flex justify-center items-center md:text-3xl my-14 ">
         FAQs
       </h1>
 
-      <div id="accordion" className="mt-5 bg-white">
+      <div id="accordion" className="mt-5 bg-slate-800 px-5 md:px-10">
         {accordionData.map((item, index) => (
           <div key={index}>
             <h2>
               <button
                 type="button"
-                className={`flex items-center justify-between w-full p-5 font-medium rtl:text-right text-black border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 hover:bg-gray-100 bg-slate-100 gap-3  ${
-                  activeAccordion === index ? "bg-gray-100" : ""
+                className={`flex items-center justify-between w-full p-5 font-medium rtl:text-right text-white border-2  border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200  bg-slate-800 gap-3  ${
+                  activeAccordion === index ? "bg-slate-800 text-white" : ""
                 }`}
                 onClick={() => toggleAccordion(index)}
                 aria-expanded={activeAccordion === index}
@@ -80,11 +80,11 @@ const Accordion = () => {
             <div
               className={`${
                 activeAccordion === index ? "" : "hidden"
-              } p-5 border border-b-0 border-gray-200 bg-slate-200 rounded-b-lg `}
+              } p-5 border border-b-2 border-gray-200 bg-slate-800 text-white rounded-b-lg `}
               id={`accordion-collapse-body-${index}`}
               aria-labelledby={`accordion-collapse-heading-${index}`}
             >
-              <p className="mb-2 text-black whitespace-pre-line">
+              <p className="mb-2 text-white whitespace-pre-line">
                 {item.answer}
               </p>
             </div>

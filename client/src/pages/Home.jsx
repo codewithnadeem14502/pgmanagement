@@ -6,12 +6,14 @@ import Accordion from "../components/Accordion";
 import Footer from "../components/Footer";
 import Base1 from "../components/Base1";
 import Base2 from "../components/Base2";
+import Base3 from "../components/Base3";
 const Home = () => {
   return (
-    <div className="w-full h-screen bg-white px-5">
+    <div className="w-full h-screen bg-slate-800">
       <Header />
       <Base1 />
-      <Base2 />
+      {/* <Base2 /> */}
+      <Base3 />
       <PricingCards />
       <Accordion />
       <Footer />
