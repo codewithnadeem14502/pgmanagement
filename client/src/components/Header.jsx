@@ -6,7 +6,7 @@ import axios from "axios";
 import { useSnackbar } from "notistack";
 import config from "../../config.json";
 
-import logo from "../assets/logon.svg";
+import logo from "../assets/mainlogo.svg";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -103,7 +103,7 @@ const Header = () => {
           ) : (
             <>
               <button
-                className="block mb-2 p-2 font-semibold text-sm rounded-lg hover:text-indigo-500 transition-all duration-300"
+                className="block mb-2 p-2 font-semibold text-white text-sm rounded-lg hover:text-indigo-500 transition-all duration-300"
                 onClick={() => {
                   toggleMenu();
                   handleDashboard();
@@ -112,7 +112,7 @@ const Header = () => {
                 Dashboard
               </button>
               <button
-                className="block mb-2 p-2 font-semibold text-sm rounded-lg hover:text-indigo-500 transition-all duration-300"
+                className="block mb-2 p-2 font-semibold text-white text-sm rounded-lg hover:text-indigo-500 transition-all duration-300"
                 onClick={() => {
                   toggleMenu();
                   handleProfile();
@@ -121,7 +121,7 @@ const Header = () => {
                 Profile
               </button>
               <button
-                className="block mb-2 p-2 font-semibold text-sm rounded-lg hover:text-indigo-500 transition-all duration-300"
+                className="block mb-2 p-2 font-semibold text-white text-sm rounded-lg hover:text-indigo-500 transition-all duration-300"
                 onClick={() => {
                   toggleMenu();
                   handleHistory();
@@ -145,25 +145,25 @@ const Header = () => {
       {userIDcontext && (
         <div className="hidden md:flex items-center space-x-4">
           <button
-            className="p-3 font-semibold text-lg rounded-lg hover:text-indigo-500 transition-all duration-300"
+            className="p-3 font-semibold text-lg text-white rounded-lg hover:text-indigo-500 transition-all duration-300"
             onClick={handleDashboard}
           >
             Dashboard
           </button>{" "}
           <button
-            className="p-3 font-semibold text-lg rounded-lg hover:text-indigo-500 transition-all duration-300"
+            className="p-3 font-semibold text-lg text-white rounded-lg hover:text-indigo-500 transition-all duration-300"
             onClick={handleProfile}
           >
             Profile
           </button>
           <button
-            className="p-3 font-semibold text-lg rounded-lg hover:text-indigo-500 transition-all duration-300"
+            className="p-3 font-semibold text-lg text-white rounded-lg hover:text-indigo-500 transition-all duration-300"
             onClick={handleHistory}
           >
             History
           </button>
           <button
-            className="p-3 bg-yellow-400 text-lg rounded-lg hover:bg-yellow-500 transition-all duration-300"
+            className="p-3 bg-blue-500 text-white font-semibold text-lg rounded-lg hover:bg-yellow-500 transition-all duration-300"
             onClick={handleLogout}
           >
             Logout

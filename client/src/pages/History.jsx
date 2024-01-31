@@ -119,7 +119,7 @@ const History = () => {
             </div>
           </div>
           <div>
-            <h1 className="mb-5  text-xl font-bold my-10 md:text-3xl">
+            <h1 className="mb-5  text-xl font-bold text-white my-10 md:text-3xl">
               {`${monthName} history`}
             </h1>
           </div>

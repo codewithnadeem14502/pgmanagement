@@ -16,9 +16,10 @@ const app = express();
 
 const PORT = process.env.PORT;
 mongoose
-  .connect(
-    "mongodb+srv://doadmin:7I8fWg5p906Zq34O@pgdatabase-13de2ab2.mongo.ondigitalocean.com/admin"
-  )
+  // .connect(
+  //   "mongodb+srv://doadmin:7I8fWg5p906Zq34O@pgdatabase-13de2ab2.mongo.ondigitalocean.com/admin"
+  // )
+  .connect("mongodb+srv://doadmin:7I8fWg5p906Zq34O@pgdatabase-13de2ab2.mongo.ondigitalocean.com/admin")
   // .connect("mongodb://127.0.0.1:27017/PG")
   .then(() => console.log(`DataBase is connected ${PORT}`));
 

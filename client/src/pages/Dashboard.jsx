@@ -176,7 +176,7 @@ const Dashboard = () => {
           </div>
 
           <div>
-            <h1 className="mb-5  text-xl font-bold my-10 md:text-3xl">
+            <h1 className="mb-5 text-white  text-xl font-bold my-10 md:text-3xl">
               Dashboard
             </h1>
           </div>

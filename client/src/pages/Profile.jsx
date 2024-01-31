@@ -41,11 +41,11 @@ const Profile = () => {
   return (
     <>
       <Header />
-      <div className="container mx-auto my-2 p-4 bg-white shadow-lg rounded-md">
+      <div className="container mx-auto my-2 p-4  shadow-lg rounded-md">
         {profileData ? (
           <div>
             <div className="flex justify-between items-center my-5 ">
-              <p className="text-3xl font-bold mb-4 text-black">Profile</p>
+              <p className="text-3xl font-bold mb-4 text-white">Profile</p>
               <BackButton />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -60,7 +60,7 @@ const RentManagement = () => {
           className={`bg-slate-800 text-white p-6 m-5  ml-5  md:w-64 lg:w-96 flex-col  lg:flex rounded-md shadow-md border-2 lg:flex-row `}
           initial={{ x: index % 2 === 0 ? -1000 : 1000 }}
           animate={{ x: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
           whileHover={{
             scale: 1.05,
             boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)",
