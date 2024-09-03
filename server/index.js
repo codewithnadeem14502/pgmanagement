@@ -40,9 +40,9 @@ app.options("*", cors());
 app.use("/api/v1/pg", pgRouter);
 app.use("/api/v1/tenant", TenantsRouter);
 app.use(express.static(path.join(__dirname, "dist")));
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "dist", "index.html"));
+// });
 // Define routes first
 app.get("/", (req, res) => {
   res.send("pg management backend is working...");
@@ -57,9 +57,3 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log("Server is working");
 });
-
-
-
-
-
-
