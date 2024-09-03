@@ -33,6 +33,8 @@ app.use(
 );
 // added here
 // app.use(isAuth);
+// Handle preflight requests
+app.options("*", cors());
 app.use("/api/v1/pg", pgRouter);
 app.use("/api/v1/tenant", TenantsRouter);
 
