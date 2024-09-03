@@ -37,7 +37,12 @@ app.use(
 app.options("*", cors());
 app.use("/api/v1/pg", pgRouter);
 app.use("/api/v1/tenant", TenantsRouter);
+// Define routes first
+app.get("/", (req, res) => {
+  res.send("pg management backend is working...");
+});
 
+// Serve static files
 app.use(express.static(path.join(__dirname, "dist")));
 
 app.get("/", (req, res) => {
