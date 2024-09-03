@@ -22,21 +22,27 @@ mongoose
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+
 app.use(
   cors({
-    origin: "https://pgmanagement-seven.vercel.app",
+    origin: ["https://pgmanagement-seven.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders:
       "Origin, X-Requested-With, Content-Type, Accept, Authorization",
     credentials: true,
   })
 );
+
 // added here
 // app.use(isAuth);
 // Handle preflight requests
 app.options("*", cors());
 app.use("/api/v1/pg", pgRouter);
 app.use("/api/v1/tenant", TenantsRouter);
+app.use(express.static(path.join(__dirname, "dist")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
 // Define routes first
 app.get("/", (req, res) => {
   res.send("pg management backend is working...");
@@ -51,3 +57,9 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log("Server is working");
 });
+
+
+
+
+
+
